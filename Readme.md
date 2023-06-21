@@ -5,7 +5,7 @@ This repository is the official repository of the GenImage benchmark.
 
 This repository contains the GenImage dataset and the evaluated methods.
 
-If this project helps you, we hope you can fork, watch, and give a star to this repository.   
+If this project helps you, please fork, watch, and give a star to this repository.   
 
 We recommend you to visit our [homepage](https://genimage-dataset.github.io/). 
 
