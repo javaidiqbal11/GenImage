@@ -2,7 +2,7 @@
 
 These are the codes of the detectors used in GenImage benchmark. 
 
-Stable Diffusion: stable-diffusion-main (https://huggingface.co/CompVis/stable-diffusion-v1-4)
+Stable Diffusion: stable-diffusion-main (https://github.com/CompVis/stable-diffusion)
 
 GLIDE: guided-diffusion-main (https://github.com/openai/glide-text2im)
 
