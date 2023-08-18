@@ -57,9 +57,27 @@ Each folder contains compressed files. After unzip the file, files under the dat
 │   ├── ...
 ```
 
+## Tutorial
+To train a detector with Stable diffusion v1.4, we can only use Stable Diffusion V1.4/ folder. To train a detector with full GenImage training set, we should create a folder named imagenet_ai, as follows.
+```
+├── imagenet_ai
+│   ├── train
+│   │   ├── ai
+│   │   ├── nature
+│   ├── val
+│   │   ├── ai
+│   │   ├── nature
+```
+All the images in the generator foloder should be put into the corresponding folder in imagenet_ai. For example, the images in Midjourney/train/ai should be put into imagenet_ai/train/ai. The images in VQDM/val/nature should be put into imagenet_ai/val/nature. Then we can train a binary classifier for the dataset. A typical example is training a ResNet-50 with Timm Library and 2 GPU. 
+
+```
+sh ./distributed_train.sh 2 /cache/imagenet_ai/ -b 64 --model resnet50 --sched cosine --epochs 200 --lr 0.05 --amp --remode pixel --reprob 0.6 --aug-splits 3 --aa rand-m9-mstd0.5-inc1 --resplit --jsd --dist-bn reduce --num-classes 2
+```
+
 ## Detection Methods
 
 We use the codes of detection methods provided in the corresponding paper. 
+The codes are stored in detection_codes/ folder.
 
 - [ResNet-50](https://github.com/huggingface/pytorch-image-models/tree/v0.6.12/timm)
 - [DeiT-S](https://github.com/facebookresearch/deit)
@@ -68,6 +86,19 @@ We use the codes of detection methods provided in the corresponding paper.
 - [Spec](https://github.com/ColumbiaDVMM/AutoGAN)
 - [F3Net](https://github.com/yyk-wew/F3Net)
 - [GramNet](https://github.com/liuzhengzhe/Global_Texture_Enhancement_for_Fake_Face_Detection_in_the-Wild)
+
+
+## Generators
+
+We use the codes of generative models provided in the corresponding paper. 
+The codes are stored in generator_codes/ folder.
+
+- [Stable Diffusion](https://github.com/CompVis/stable-diffusion)
+- [GLIDE](https://github.com/openai/glide-text2im)
+- [VDQM](https://github.com/microsoft/VQ-Diffusion)
+- [BigGAN](https://github.com/ajbrock/BigGAN-PyTorch)
+- [ADM](https://github.com/openai/guided-diffusion)
+
 
 ## Benchmark
 - Table 3: Results of different methods trained on SD V1.4 and evaluated on different testing subsets.
