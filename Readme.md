@@ -1,7 +1,7 @@
 # GenImage: A Million-Scale Benchmark for Detecting AI-Generated Image [[Homepage]](https://genimage-dataset.github.io/)
 **Mingjian Zhu, Hanting Chen, Qiangyu Yan, Xudong Huang, Guanyu Lin, Wei Li, Zhijun Tu, Hailin Hu, Jie Hu, Yunhe Wang**
 
-**:star:News [20240315]: We have uploaded the dataset to Google Drive. The link is https://drive.google.com/drive/folders/1jGt10bwTbhEZuGXLyvrCuxOI0cBqQ1FS?usp=drive_link.**
+**:star:News [20240315]: We have uploaded the dataset to Google Drive. The link is https://drive.google.com/drive/folders/1jGt10bwTbhEZuGXLyvrCuxOI0cBqQ1FS?usp=sharing.**
    
 **:star:News: We have recently released a paper, which proposes a detector named GenDet for AI-generated image detection!**
    https://arxiv.org/abs/2312.08880
