@@ -155,3 +155,6 @@ This repository borrows partially from the [pytorch-CycleGAN-and-pix2pix](https:
 
 If you find this useful for your research, please consider citing this [bibtex](https://peterwang512.github.io/CNNDetection/bibtex.txt). Please contact Sheng-Yu Wang \<sheng-yu_wang at berkeley dot edu\> with any comments or feedback.
 
+
+
+Updated with the required configuration 
